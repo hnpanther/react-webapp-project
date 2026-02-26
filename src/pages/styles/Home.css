@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Vazir';
+  src: url('../../assets/fonts/Vazirmatn-Regular.woff2') format('woff2');
+       /* url('../../assets/fonts/Vazi') format('woff'); */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../../assets/fonts/Vazirmatn-Bold.woff2') format('woff2');
+       /* url('../assets/fonts/Vazir-Bold.woff') format('woff'); */
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Vazir', sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+/* صفحه اصلی کل صفحه */
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 0; /* padding 20px حذف شد */
+}
+
+/* کارت محتوا */
+.home-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px; /* بزرگتر برای دسکتاپ */
+  height: 80vh; /* کارت تقریبا کل ارتفاع صفحه */
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* بخش متن */
+.home-text {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.home-text button {
+  width: fit-content;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-text button:hover {
+  background: linear-gradient(135deg, #357ABD, #2a5a9e);
+}
+
+/* بخش تصویر */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f4f8;
+}
+
+.home-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+    height: auto; /* ارتفاع خودکار در موبایل */
+  }
+
+  .home-text, .home-image {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 24px;
+  }
+}
+
+/* پیام خطا */
+.login-error {
+  color: #d93025;
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* دکمه لودینگ */
+.login-form button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
