@@ -104,3 +104,33 @@
     padding: 25px;
   }
 }
+
+.portal-sidebar li.active {
+  background: #2563eb;
+  font-weight: bold;
+}
+
+/* make the entire link area clickable */
+.portal-sidebar li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portal-sidebar li .nav-item {
+  display: block;       /* ← کل فضای li رو پوشش میده */
+  padding: 15px 25px;   /* ← فضای کلیک پذیر */
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.portal-sidebar li .nav-item:hover {
+  background: #374151;
+}
+
+.portal-sidebar li .nav-item.active {
+  background: #2563eb;
+  font-weight: bold;
+}
