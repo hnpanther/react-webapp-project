@@ -77,4 +77,5 @@ npm create vite@latest . # create react project
 npm install # install all dependencies
 npm run dev # run project in dev mode
 npm install react-router-dom
+npm install jwt-decode
 ```

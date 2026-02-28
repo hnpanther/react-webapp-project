@@ -1,0 +1,106 @@
+.portal-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fa;
+}
+
+/* Navbar */
+.portal-navbar {
+  height: 60px;
+  background: linear-gradient(135deg, #4a90e2, #357ABD);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.portal-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-btn {
+  background: #fff;
+  color: #357ABD;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Body */
+.portal-body {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+/* Sidebar */
+.portal-sidebar {
+  width: 250px;
+  background: #1f2937;
+  color: #fff;
+  padding-top: 30px;
+  transition: 0.3s;
+}
+
+.portal-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portal-sidebar li {
+  padding: 15px 25px;
+  cursor: pointer;
+}
+
+.portal-sidebar li:hover {
+  background: #374151;
+}
+
+/* Content */
+.portal-content {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+}
+
+/* ----------------------- */
+/* 📱 Responsive Section */
+/* ----------------------- */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .portal-sidebar {
+    position: absolute;
+    right: -250px;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+  }
+
+  .portal-sidebar.open {
+    right: 0;
+  }
+
+  .portal-content {
+    padding: 25px;
+  }
+}
